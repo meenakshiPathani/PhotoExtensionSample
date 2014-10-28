@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ObA-dk-sSI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Editing View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="PhotoEditingViewController" customModule="PhotoExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qkL-Od-lgU"/>
+                        <viewControllerLayoutGuide type="bottom" id="n38-gi-rB5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1NA-kt-v0P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YUJ-zw-oVd">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="369"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI9-tI-b7R">
+                                <rect key="frame" x="20" y="409" width="280" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="M62-Al-1al"/>
+                                    <constraint firstAttribute="height" constant="30" id="pGs-ip-Z5B"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="ObA-dk-sSI" eventType="touchUpInside" id="4Fr-ZM-SbI"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YUJ-zw-oVd" firstAttribute="leading" secondItem="aI9-tI-b7R" secondAttribute="trailing" constant="-298" id="1ni-IZ-NYz"/>
+                            <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="aI9-tI-b7R" secondAttribute="bottom" constant="89" id="2ia-UT-JaV"/>
+                            <constraint firstItem="aI9-tI-b7R" firstAttribute="top" secondItem="YUJ-zw-oVd" secondAttribute="bottom" constant="40" id="9vr-wo-vL4"/>
+                            <constraint firstItem="YUJ-zw-oVd" firstAttribute="top" secondItem="1NA-kt-v0P" secondAttribute="top" id="lZC-2a-ckv"/>
+                            <constraint firstAttribute="centerX" secondItem="aI9-tI-b7R" secondAttribute="centerX" id="pyQ-Gw-jZh"/>
+                            <constraint firstItem="YUJ-zw-oVd" firstAttribute="leading" secondItem="1NA-kt-v0P" secondAttribute="leading" id="tT8-rn-ZUX"/>
+                            <constraint firstAttribute="trailing" secondItem="YUJ-zw-oVd" secondAttribute="trailing" id="vNI-cc-Nzy"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="editingImageView" destination="YUJ-zw-oVd" id="zgs-33-pNa"/>
+                        <outlet property="slider" destination="aI9-tI-b7R" id="QMS-VF-jVO"/>
+                        <outlet property="view" destination="1NA-kt-v0P" id="Oe6-Wy-qf3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="326" y="-128"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
